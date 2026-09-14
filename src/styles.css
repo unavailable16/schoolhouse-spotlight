@@ -115,15 +115,15 @@
 
 :root {
   --radius: 0.625rem;
-  --canvas: oklch(0.958 0.024 87.5);
-  --paper: oklch(0.911 0.032 86.9);
-  --ink: oklch(0.238 0.021 71.2);
-  --ink-soft: oklch(0.408 0.031 71.9);
-  --umber: oklch(0.446 0.083 48.3);
-  --umber-deep: oklch(0.35 0.073 48.6);
-  --brass: oklch(0.687 0.089 78.2);
-  --moss: oklch(0.435 0.041 132.4);
-  --sage: oklch(0.65 0.038 118.6);
+  --canvas: oklch(0.966 0.028 96);
+  --paper: oklch(0.925 0.041 100);
+  --ink: oklch(0.238 0.038 145);
+  --ink-soft: oklch(0.418 0.045 145);
+  --umber: oklch(0.452 0.113 148);
+  --umber-deep: oklch(0.335 0.09 148);
+  --brass: oklch(0.845 0.19 124);
+  --moss: oklch(0.435 0.075 140);
+  --sage: oklch(0.72 0.11 130);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
