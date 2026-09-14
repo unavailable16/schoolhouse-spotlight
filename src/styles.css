@@ -59,10 +59,71 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-canvas: var(--canvas);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-umber: var(--umber);
+  --color-umber-deep: var(--umber-deep);
+  --color-brass: var(--brass);
+  --color-moss: var(--moss);
+  --color-sage: var(--sage);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility rise {
+  animation: fadeup 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@utility d1 {
+  animation-delay: 0.05s;
+}
+@utility d2 {
+  animation-delay: 0.16s;
+}
+@utility d3 {
+  animation-delay: 0.27s;
+}
+@utility d4 {
+  animation-delay: 0.38s;
+}
+@utility panel {
+  transform: skewX(-10deg);
+}
+@utility panel-inner {
+  transform: skewX(10deg);
+}
+@utility glow {
+  background: radial-gradient(
+    120% 120% at 15% 0%,
+    color-mix(in oklab, var(--brass) 35%, transparent),
+    transparent 55%
+  );
 }
 
 :root {
   --radius: 0.625rem;
+  --canvas: oklch(0.958 0.024 87.5);
+  --paper: oklch(0.911 0.032 86.9);
+  --ink: oklch(0.238 0.021 71.2);
+  --ink-soft: oklch(0.408 0.031 71.9);
+  --umber: oklch(0.446 0.083 48.3);
+  --umber-deep: oklch(0.35 0.073 48.6);
+  --brass: oklch(0.687 0.089 78.2);
+  --moss: oklch(0.435 0.041 132.4);
+  --sage: oklch(0.65 0.038 118.6);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
