@@ -4,10 +4,11 @@ const schoolAddress = "Jl. Pustaka No. 4, Bandung 40115";
 
 export function SchoolMap() {
   const key = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"];
+  const canEmbedMap = key && (typeof window === "undefined" || window.location.hostname !== "localhost");
 
   return (
     <div className="overflow-hidden rounded-lg bg-paper ring-1 ring-ink/10">
-      {key ? (
+      {canEmbedMap ? (
         <iframe
           title="Lokasi Sekolah Aldergrove di Google Maps"
           src={`https://www.google.com/maps/embed/v1/place?key=${key}&q=${encodeURIComponent(schoolAddress)}`}
