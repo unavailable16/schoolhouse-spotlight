@@ -1,7 +1,7 @@
 # Roadmap
 
-- [ ] Add SPMB page and navigation item
-- [ ] Add linked homepage carousel with school, SPMB, and top news slides
-- [ ] Rename and reorganize the educator page
-- [ ] Add the school location map
+- [x] Add SPMB page and navigation item
+- [x] Add linked homepage carousel with school, SPMB, and top news slides
+- [x] Rename and reorganize the educator page
+- [x] Add the school location map
 - [ ] Verify links, layouts, map, and build status

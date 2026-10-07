@@ -35,6 +35,12 @@ export function SiteHeader() {
           Daftar
         </Link>
       </div>
+      <nav className="mx-auto flex max-w-6xl items-center justify-center gap-6 overflow-x-auto border-t border-ink/10 px-6 py-2 font-body text-xs text-ink-soft md:hidden">
+        <Link to="/" className={navCls} activeOptions={{ exact: true }}>Beranda</Link>
+        <Link to="/guru" className={navCls}>Tenaga Pendidik</Link>
+        <Link to="/berita" className={navCls}>Berita</Link>
+        <Link to="/spmb" className={navCls}>SPMB</Link>
+      </nav>
     </header>
   );
 }
