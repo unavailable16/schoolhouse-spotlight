@@ -19,19 +19,28 @@ export function SiteHeader() {
             Beranda
           </Link>
           <Link to="/guru" className={navCls} activeProps={{ className: "text-ink font-[500]" }}>
-            Guru
+            Tenaga Pendidik
           </Link>
           <Link to="/berita" className={navCls} activeProps={{ className: "text-ink font-[500]" }}>
             Berita
           </Link>
+          <Link to="/spmb" className={navCls} activeProps={{ className: "text-ink font-[500]" }}>
+            SPMB
+          </Link>
         </nav>
-        <a
-          href="mailto:admissions@aldergrove.example"
+        <Link
+          to="/spmb"
           className="rounded-[min(1vw,10px)] bg-umber px-4 py-2 font-body text-sm font-[500] text-canvas ring-1 ring-umber-deep/40 transition-colors hover:bg-umber-deep"
         >
           Daftar
-        </a>
+        </Link>
       </div>
+      <nav className="mx-auto flex max-w-6xl items-center justify-center gap-6 overflow-x-auto border-t border-ink/10 px-6 py-2 font-body text-xs text-ink-soft md:hidden">
+        <Link to="/" className={navCls} activeOptions={{ exact: true }}>Beranda</Link>
+        <Link to="/guru" className={navCls}>Tenaga Pendidik</Link>
+        <Link to="/berita" className={navCls}>Berita</Link>
+        <Link to="/spmb" className={navCls}>SPMB</Link>
+      </nav>
     </header>
   );
 }

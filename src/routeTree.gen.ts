@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GuruRouteImport } from './routes/guru'
+import { Route as SpmbRouteImport } from './routes/spmb'
 import { Route as BeritaIndexRouteImport } from './routes/berita.index'
 import { Route as BeritaSlugRouteImport } from './routes/berita.$slug'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const GuruRoute = GuruRouteImport.update({
   id: '/guru',
   path: '/guru',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpmbRoute = SpmbRouteImport.update({
+  id: '/spmb',
+  path: '/spmb',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BeritaIndexRoute = BeritaIndexRouteImport.update({
@@ -38,12 +44,14 @@ const BeritaSlugRoute = BeritaSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/guru': typeof GuruRoute
+  '/spmb': typeof SpmbRoute
   '/berita/$slug': typeof BeritaSlugRoute
   '/berita/': typeof BeritaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/guru': typeof GuruRoute
+  '/spmb': typeof SpmbRoute
   '/berita/$slug': typeof BeritaSlugRoute
   '/berita': typeof BeritaIndexRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/guru': typeof GuruRoute
+  '/spmb': typeof SpmbRoute
   '/berita/$slug': typeof BeritaSlugRoute
   '/berita/': typeof BeritaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/guru' | '/berita/$slug' | '/berita/'
+  fullPaths: '/' | '/guru' | '/spmb' | '/berita/$slug' | '/berita/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/guru' | '/berita/$slug' | '/berita'
-  id: '__root__' | '/' | '/guru' | '/berita/$slug' | '/berita/'
+  to: '/' | '/guru' | '/spmb' | '/berita/$slug' | '/berita'
+  id: '__root__' | '/' | '/guru' | '/spmb' | '/berita/$slug' | '/berita/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GuruRoute: typeof GuruRoute
+  SpmbRoute: typeof SpmbRoute
   BeritaSlugRoute: typeof BeritaSlugRoute
   BeritaIndexRoute: typeof BeritaIndexRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/guru'
       fullPath: '/guru'
       preLoaderRoute: typeof GuruRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/spmb': {
+      id: '/spmb'
+      path: '/spmb'
+      fullPath: '/spmb'
+      preLoaderRoute: typeof SpmbRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/berita/': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GuruRoute: GuruRoute,
+  SpmbRoute: SpmbRoute,
   BeritaSlugRoute: BeritaSlugRoute,
   BeritaIndexRoute: BeritaIndexRoute,
 }

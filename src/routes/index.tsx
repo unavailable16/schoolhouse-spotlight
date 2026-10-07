@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { NewsCard } from "@/components/news-card";
+import { SchoolCarousel } from "@/components/school-carousel";
 import { news } from "@/lib/content";
 
 import bookShelf from "@/assets/book-shelf.jpg";
 import courtyard from "@/assets/courtyard.jpg";
 import libraryTables from "@/assets/library-tables.jpg";
-import readingRoom from "@/assets/reading-room.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -89,66 +89,7 @@ function Index() {
       <SiteHeader />
 
       <main className="font-body text-ink">
-        <section className="relative overflow-hidden bg-canvas">
-          <div className="glow pointer-events-none absolute inset-0" />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 pt-16 pb-20 lg:grid-cols-12 lg:px-8 lg:pt-24 lg:pb-28">
-            <div className="absolute top-4 right-32 z-10 hidden h-[68%] w-[46%] lg:block">
-              <div className="panel bg-paper/70 absolute inset-0 overflow-hidden rounded-[min(2vw,20px)] shadow-[0_30px_60px_-30px_rgba(34,28,18,.45)] ring-1 ring-ink/10 backdrop-blur-md">
-                <div className="panel-inner absolute inset-0 grid place-items-end p-8">
-                  <div className="max-w-[30ch]">
-                    <p className="mb-3 font-body text-[11px] tracking-[0.22em] uppercase text-umber">
-                      Berdiri 1898 · Bandung
-                    </p>
-                    <p className="font-display text-2xl leading-tight font-[560] text-ink">
-                      Tempat tenang untuk berpikir lantang.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative z-20 lg:col-span-7">
-              <p className="rise d1 mb-5 font-body text-xs tracking-[0.24em] uppercase text-umber">
-                Sekolah Swasta SMP &amp; SMA · Usia 11–18
-              </p>
-              <h1 className="rise d2 max-w-[17ch] font-display text-4xl leading-tight font-[620] tracking-tight text-balance text-ink sm:text-5xl lg:text-6xl">
-                Lumen et Labor
-              </h1>
-              <p className="rise d3 mt-6 max-w-[46ch] font-body text-base leading-relaxed text-ink-soft sm:text-lg">
-                Cahaya, dan kerja keras yang lahir darinya. Selama satu abad kami mengajar siswa untuk membaca dengan teliti, berargumen dengan adil, dan membawa gagasan mereka ke dunia yang lebih luas.
-              </p>
-              <div className="rise d4 mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="#admissions"
-                  className="inline-flex items-center gap-2 rounded-[min(1vw,10px)] bg-umber px-4 py-2 font-body text-sm font-[500] text-canvas ring-1 ring-umber-deep/40 transition-colors hover:bg-umber-deep"
-                >
-                  Jadwalkan kunjungan
-                </a>
-                <a
-                  href="#focus"
-                  className="inline-flex items-center gap-2 font-body text-sm font-[500] text-ink transition-colors hover:text-umber"
-                >
-                  Lihat fokus kami →
-                </a>
-              </div>
-            </div>
-
-            <div className="relative z-20 lg:col-span-5">
-              <div className="rise d3">
-                <img
-                  src={readingRoom}
-                  alt="Cahaya pagi masuk melalui jendela tinggi perpustakaan di atas meja baca kayu"
-                  width={1088}
-                  height={1360}
-                  className="aspect-[4/5] w-full rounded-[min(1.6vw,16px)] bg-paper object-cover outline-1 -outline-offset-1 outline-black/5"
-                />
-                <p className="mt-3 font-body text-xs leading-snug text-ink-soft">
-                  Ruang Baca Perpustakaan Aldergrove — buka hingga pukul 19.00 pada hari sekolah.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <SchoolCarousel />
 
         <section id="focus" className="bg-paper">
           <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
