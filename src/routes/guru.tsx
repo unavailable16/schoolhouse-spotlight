@@ -19,6 +19,8 @@ export const Route = createFileRoute("/guru")({
 function GuruPage() {
   const [headmaster, ...educators] = teachers;
 
+  if (!headmaster) return null;
+
   return (
     <div className="bg-canvas">
       <SiteHeader />
