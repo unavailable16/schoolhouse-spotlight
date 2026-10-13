@@ -15,7 +15,7 @@ import { ActivityPhoto } from "@/components/activity-photo";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useActivities, type ActivityPhoto as Photo } from "@/lib/activities";
 export const Route = createFileRoute("/kegiatan/$slug")({
-  head: () => ({ meta: [{ title: "Program Ekstrakurikuler — SMP Islam Al-Mujahidin Pamulang" }] }),
+  head: () => ({ meta: [{ title: "Program Ekstrakurikuler — SMP Islam Al-Mujahidin Pamulang" }, { name: "description", content: "Program ekstrakurikuler, jadwal, dan dokumentasi SMP Islam Al-Mujahidin Pamulang." }, { property: "og:title", content: "Program Ekstrakurikuler — SMP Islam Al-Mujahidin Pamulang" }, { property: "og:description", content: "Program ekstrakurikuler, jadwal, dan dokumentasi SMP Islam Al-Mujahidin Pamulang." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }),
   component: ClubDetail,
 });
 function ClubDetail() {

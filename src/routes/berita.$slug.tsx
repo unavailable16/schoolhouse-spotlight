@@ -5,7 +5,7 @@ import { displayPublishDate } from "@/lib/news-api";
 import { useNews } from "@/hooks/use-news";
 
 export const Route = createFileRoute("/berita/$slug")({
-  head: () => ({ meta: [{ title: "Berita Sekolah — SMP Islam Al-Mujahidin Pamulang" }] }),
+  head: () => ({ meta: [{ title: "Berita Sekolah — SMP Islam Al-Mujahidin Pamulang" }, { name: "description", content: "Berita dan buletin terbaru dari SMP Islam Al-Mujahidin Pamulang." }, { property: "og:title", content: "Berita Sekolah — SMP Islam Al-Mujahidin Pamulang" }, { property: "og:description", content: "Berita dan buletin terbaru dari SMP Islam Al-Mujahidin Pamulang." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }),
   notFoundComponent: BeritaNotFound,
   component: BeritaDetail,
 });

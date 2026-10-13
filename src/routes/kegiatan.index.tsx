@@ -9,7 +9,7 @@ import { useActivities, type ActivityPhoto as Photo } from "@/lib/activities";
 export const Route = createFileRoute("/kegiatan/")({
   head: () => ({
     meta: [
-      { title: "Kegiatan — SMP Islam Al-Mujahidin Pamulang" },
+      { title: "Kegiatan — SMP Islam Al-Mujahidin Pamulang" }, { property: "og:title", content: "Kegiatan — SMP Islam Al-Mujahidin Pamulang" }, { property: "og:description", content: "Informasi SMP Islam Al-Mujahidin Pamulang." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
       {
         name: "description",
         content:

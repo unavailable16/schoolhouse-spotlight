@@ -10,7 +10,7 @@ import { school } from "@/lib/school";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Dashboard Admin — Al-Mujahidin" },
+      { title: "Dashboard Admin — Al-Mujahidin" }, { name: "description", content: "Kelola berita, buletin, kegiatan, dan informasi SMP Islam Al-Mujahidin Pamulang." }, { property: "og:title", content: "Dashboard Admin — Al-Mujahidin" }, { property: "og:description", content: "Kelola berita, buletin, kegiatan, dan informasi SMP Islam Al-Mujahidin Pamulang." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -236,10 +236,11 @@ function Admin() {
           </p>
           <form onSubmit={login} className="mt-6 space-y-4">
             <label className="block text-sm">
-              Username
+              Email
               <input
                 required
-                autoComplete="username"
+                type="email"
+                autoComplete="email"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className={field}
