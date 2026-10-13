@@ -10,6 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { AnnouncementProvider } from "@/components/spmb-announcement";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -78,13 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sekolah Aldergrove" },
-      { name: "description", content: "Sekolah swasta SMP dan SMA di Bandung." },
-      { name: "author", content: "Aldergrove School" },
-      { property: "og:title", content: "Aldergrove School" },
+      { title: "SMP Islam Al-Mujahidin Pamulang" },
+      { name: "description", content: "Sekolah Islam jenjang SMP di Pamulang, Tangerang Selatan." },
+      { name: "author", content: "SMP Islam Al-Mujahidin Pamulang" },
+      { property: "og:title", content: "SMP Islam Al-Mujahidin Pamulang" },
       {
         property: "og:description",
-        content: "Sekolah swasta SMP dan SMA di Bandung.",
+        content: "Sekolah Islam jenjang SMP di Pamulang, Tangerang Selatan.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -95,7 +96,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/__l5e/assets-v1/5ac2faad-40a7-4b4e-bc2b-70bac191f393/logo-sekolah.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -130,7 +131,9 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <AnnouncementProvider>
+        <Outlet />
+      </AnnouncementProvider>
     </QueryClientProvider>
   );
 }
