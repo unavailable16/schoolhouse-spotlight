@@ -6,9 +6,10 @@ import activities from "./imported/activities.seed.json";
 import settings from "./imported/school-settings.json";
 import media from "./imported/site-media.json";
 import { applyNewsChange, publicNews } from "./cms-rules";
+import type { Json } from "@/integrations/supabase/types";
 
-const imported: Record<string, unknown> = { news, activities, "school-settings": settings, "site-media": media };
-type Input = { path: string; method: string; body?: string };
+const imported: Record<string, Json> = { news, activities, "school-settings": settings, "site-media": media };
+type Input = { path: string; method: string; body?: string | undefined };
 const validateInput = (input: Input) => {
   if (!input || typeof input.path !== "string" || typeof input.method !== "string" || (input.body && input.body.length > 32_000_000)) throw new Error("Permintaan tidak valid.");
   return input;
@@ -28,7 +29,7 @@ export const readSchoolContent = createServerFn({ method: "GET" })
     const { data, error } = await client.from("school_content").select("payload").eq("id", id).maybeSingle();
     if (error) throw new Error("Data sekolah belum dapat dimuat.");
     const value = data?.payload ?? imported[id];
-    return id === "news" ? publicNews(value) : value;
+    return id === "news" ? publicNews(value) : (value ?? null);
   });
 
 export const manageSchoolContent = createServerFn({ method: "POST" })
@@ -45,7 +46,7 @@ export const manageSchoolContent = createServerFn({ method: "POST" })
     const { data: row, error } = await context.supabase.from("school_content").select("payload, updated_at").eq("id", id).maybeSingle();
     if (error) throw new Error("Data belum dapat dimuat.");
     const current = row?.payload ?? imported[id];
-    if (input.method === "GET") return current;
+    if (input.method === "GET") return current ?? null;
     const body: unknown = JSON.parse(input.body || "{}");
     let value: unknown;
     if (id === "news") value = applyNewsChange(current, input.method, body, username);
@@ -66,5 +67,5 @@ export const manageSchoolContent = createServerFn({ method: "POST" })
       const result = await context.supabase.from("school_content").insert({ id, payload, updated_at: updatedAt });
       if (result.error) throw new Error("Data belum dapat disimpan. Silakan muat ulang.");
     }
-    return value;
+    return payload as Json;
   });
