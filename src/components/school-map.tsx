@@ -1,31 +1,15 @@
-import { MapPin } from "lucide-react";
-
-const schoolAddress = "Jl. Pustaka No. 4, Bandung 40115";
 
 export function SchoolMap() {
-  const key = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"];
-  const canEmbedMap = key && (typeof window === "undefined" || window.location.hostname !== "localhost");
-
   return (
     <div className="overflow-hidden rounded-lg bg-paper ring-1 ring-ink/10">
-      {canEmbedMap ? (
-        <iframe
-          title="Lokasi Sekolah Aldergrove di Google Maps"
-          src={`https://www.google.com/maps/embed/v1/place?key=${key}&q=${encodeURIComponent(schoolAddress)}`}
-          className="h-[360px] w-full border-0 lg:h-[430px]"
-          loading="lazy"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      ) : (
-        <div className="grid h-[360px] place-items-center p-8 text-center text-ink-soft lg:h-[430px]">
-          <div>
-            <MapPin className="mx-auto mb-4 size-8 text-umber" />
-            <p className="font-[500] text-ink">{schoolAddress}</p>
-            <p className="mt-2 text-sm">Peta tersedia setelah Google Maps terhubung.</p>
-          </div>
-        </div>
-      )}
+      <iframe
+        title="Lokasi Sekolah SMP Islam Al-Mujahidin Pamulang di Google Maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d589.4578186637062!2d106.73239283767646!3d-6.3443256228179505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef785ef5542b%3A0x9d6d559ab0190633!2sSMP%20Islam%20Al%20Mujahidin%20Pamulang.%20Gedung%20baru!5e0!3m2!1sid!2sid!4v1791470427235!5m2!1sid!2sid"
+        className="block h-[360px] w-full border-0 lg:h-[430px]"
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
     </div>
   );
 }

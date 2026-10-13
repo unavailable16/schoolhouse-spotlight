@@ -10,19 +10,33 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as GuruRouteImport } from './routes/guru'
+import { Route as ProfilSekolahRouteImport } from './routes/profil-sekolah'
 import { Route as SpmbRouteImport } from './routes/spmb'
 import { Route as BeritaIndexRouteImport } from './routes/berita.index'
 import { Route as BeritaSlugRouteImport } from './routes/berita.$slug'
+import { Route as KegiatanIndexRouteImport } from './routes/kegiatan.index'
+import { Route as KegiatanSlugRouteImport } from './routes/kegiatan.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GuruRoute = GuruRouteImport.update({
   id: '/guru',
   path: '/guru',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfilSekolahRoute = ProfilSekolahRouteImport.update({
+  id: '/profil-sekolah',
+  path: '/profil-sekolah',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SpmbRoute = SpmbRouteImport.update({
@@ -40,43 +54,97 @@ const BeritaSlugRoute = BeritaSlugRouteImport.update({
   path: '/berita/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KegiatanIndexRoute = KegiatanIndexRouteImport.update({
+  id: '/kegiatan/',
+  path: '/kegiatan/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KegiatanSlugRoute = KegiatanSlugRouteImport.update({
+  id: '/kegiatan/$slug',
+  path: '/kegiatan/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/guru': typeof GuruRoute
+  '/profil-sekolah': typeof ProfilSekolahRoute
   '/spmb': typeof SpmbRoute
   '/berita/$slug': typeof BeritaSlugRoute
+  '/kegiatan/$slug': typeof KegiatanSlugRoute
   '/berita/': typeof BeritaIndexRoute
+  '/kegiatan/': typeof KegiatanIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/guru': typeof GuruRoute
+  '/profil-sekolah': typeof ProfilSekolahRoute
   '/spmb': typeof SpmbRoute
   '/berita/$slug': typeof BeritaSlugRoute
+  '/kegiatan/$slug': typeof KegiatanSlugRoute
   '/berita': typeof BeritaIndexRoute
+  '/kegiatan': typeof KegiatanIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/guru': typeof GuruRoute
+  '/profil-sekolah': typeof ProfilSekolahRoute
   '/spmb': typeof SpmbRoute
   '/berita/$slug': typeof BeritaSlugRoute
+  '/kegiatan/$slug': typeof KegiatanSlugRoute
   '/berita/': typeof BeritaIndexRoute
+  '/kegiatan/': typeof KegiatanIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/guru' | '/spmb' | '/berita/$slug' | '/berita/'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/guru'
+    | '/profil-sekolah'
+    | '/spmb'
+    | '/berita/$slug'
+    | '/kegiatan/$slug'
+    | '/berita/'
+    | '/kegiatan/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/guru' | '/spmb' | '/berita/$slug' | '/berita'
-  id: '__root__' | '/' | '/guru' | '/spmb' | '/berita/$slug' | '/berita/'
+  to:
+    | '/'
+    | '/admin'
+    | '/guru'
+    | '/profil-sekolah'
+    | '/spmb'
+    | '/berita/$slug'
+    | '/kegiatan/$slug'
+    | '/berita'
+    | '/kegiatan'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/guru'
+    | '/profil-sekolah'
+    | '/spmb'
+    | '/berita/$slug'
+    | '/kegiatan/$slug'
+    | '/berita/'
+    | '/kegiatan/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
   GuruRoute: typeof GuruRoute
+  ProfilSekolahRoute: typeof ProfilSekolahRoute
   SpmbRoute: typeof SpmbRoute
   BeritaSlugRoute: typeof BeritaSlugRoute
+  KegiatanSlugRoute: typeof KegiatanSlugRoute
   BeritaIndexRoute: typeof BeritaIndexRoute
+  KegiatanIndexRoute: typeof KegiatanIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -88,11 +156,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/guru': {
       id: '/guru'
       path: '/guru'
       fullPath: '/guru'
       preLoaderRoute: typeof GuruRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profil-sekolah': {
+      id: '/profil-sekolah'
+      path: '/profil-sekolah'
+      fullPath: '/profil-sekolah'
+      preLoaderRoute: typeof ProfilSekolahRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/spmb': {
@@ -116,15 +198,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BeritaSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kegiatan/': {
+      id: '/kegiatan/'
+      path: '/kegiatan'
+      fullPath: '/kegiatan/'
+      preLoaderRoute: typeof KegiatanIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kegiatan/$slug': {
+      id: '/kegiatan/$slug'
+      path: '/kegiatan/$slug'
+      fullPath: '/kegiatan/$slug'
+      preLoaderRoute: typeof KegiatanSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
   GuruRoute: GuruRoute,
+  ProfilSekolahRoute: ProfilSekolahRoute,
   SpmbRoute: SpmbRoute,
   BeritaSlugRoute: BeritaSlugRoute,
+  KegiatanSlugRoute: KegiatanSlugRoute,
   BeritaIndexRoute: BeritaIndexRoute,
+  KegiatanIndexRoute: KegiatanIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -115,28 +115,28 @@
 
 :root {
   --radius: 0.625rem;
-  --canvas: oklch(0.966 0.028 96);
-  --paper: oklch(0.925 0.041 100);
-  --ink: oklch(0.238 0.038 145);
-  --ink-soft: oklch(0.418 0.045 145);
-  --umber: oklch(0.452 0.113 148);
-  --umber-deep: oklch(0.335 0.09 148);
-  --brass: oklch(0.845 0.19 124);
-  --moss: oklch(0.435 0.075 140);
-  --sage: oklch(0.72 0.11 130);
+  --canvas: oklch(0.982 0.015 96);
+  --paper: oklch(0.95 0.032 112);
+  --ink: oklch(0.32 0.055 151);
+  --ink-soft: oklch(0.46 0.045 151);
+  --umber: oklch(0.49 0.145 150);
+  --umber-deep: oklch(0.43 0.115 151);
+  --brass: oklch(0.9 0.175 101);
+  --moss: oklch(0.54 0.12 144);
+  --sage: oklch(0.84 0.115 132);
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.32 0.055 151);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.49 0.145 150);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
+  --secondary: oklch(0.95 0.032 112);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.46 0.045 151);
+  --accent: oklch(0.95 0.032 132);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
@@ -201,5 +201,190 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+/* School greens with a small warm accent from the crest. */
+@layer utilities {
+  .bg-umber {
+    background-image:
+      radial-gradient(
+        ellipse at 100% 0%,
+        color-mix(in oklab, var(--brass) 13%, transparent),
+        transparent 65%
+      ),
+      linear-gradient(125deg, var(--umber-deep), var(--umber));
+  }
+  .bg-umber-deep {
+    background-image:
+      radial-gradient(
+        ellipse at 100% 0%,
+        color-mix(in oklab, var(--brass) 10%, transparent),
+        transparent 65%
+      ),
+      linear-gradient(125deg, oklch(0.32 0.09 151), var(--umber-deep) 55%, var(--umber));
+  }
+}
+.spmb-hero-wash {
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      color-mix(in oklab, var(--brass) 16%, transparent),
+      transparent 65%
+    ),
+    linear-gradient(
+      120deg,
+      color-mix(in oklab, var(--umber-deep) 90%, transparent),
+      color-mix(in oklab, var(--umber) 75%, transparent)
+    );
+}
+[data-text-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 650ms ease,
+    transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+[data-text-reveal="side"] {
+  transform: translateX(-16px);
+}
+[data-text-reveal][data-revealed="true"] {
+  opacity: 1;
+  transform: none;
+}
+body:has([data-site-header]) :is(main, header, footer) :is(a, button) {
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+body:has([data-site-header]) :is(main, header) :is(a[class*="inline-flex"], button):hover,
+footer a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px color-mix(in oklab, var(--umber-deep) 15%, transparent);
+}
+footer a:hover {
+  border-color: var(--brass);
+  background-color: color-mix(in oklab, var(--canvas) 15%, transparent);
+}
+footer a svg {
+  transition: transform 250ms ease;
+}
+footer a:hover svg {
+  transform: scale(1.15) rotate(-5deg);
+}
+body:has([data-site-header]) :is(a, button):focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-text-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .rise {
+    animation: none;
+  }
+  body:has([data-site-header]) :is(a, button),
+  footer a svg {
+    transition: none;
+  }
+  body:has([data-site-header]) :is(a, button):hover,
+  footer a:hover svg {
+    transform: none;
+  }
+}
+
+@keyframes slide-forward {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-backward {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+[data-slide-motion="forward"] {
+  animation: slide-forward 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+[data-slide-motion="backward"] {
+  animation: slide-backward 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-slide-motion] {
+    animation: none;
+  }
+}
+
+.spmb-announcement {
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  animation: announcement-open 450ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.spmb-announcement[data-announcement="open"] .announcement-content {
+  animation: announcement-drop 450ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.spmb-announcement[data-announcement="closing"] {
+  pointer-events: none;
+  animation: announcement-close 350ms ease-in both;
+}
+.spmb-announcement[data-announcement="closing"] .announcement-content {
+  animation: announcement-lift 350ms ease-in both;
+}
+@keyframes announcement-open {
+  from {
+    grid-template-rows: 0fr;
+  }
+  to {
+    grid-template-rows: 1fr;
+  }
+}
+@keyframes announcement-close {
+  from {
+    grid-template-rows: 1fr;
+  }
+  to {
+    grid-template-rows: 0fr;
+  }
+}
+@keyframes announcement-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes announcement-lift {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spmb-announcement,
+  .spmb-announcement .announcement-content {
+    animation-duration: 1ms !important;
   }
 }

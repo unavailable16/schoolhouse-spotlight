@@ -1,0 +1,325 @@
+{
+  "poster": {
+    "src": "/__l5e/assets-v1/fb5148e4-0380-473d-b22e-f65a83bc180f/jadwal-sekolah.png",
+    "alt": "Jadwal umum kegiatan siswa SMP Islam Al-Mujahidin"
+  },
+  "schedule": [
+    {
+      "id": "jadwal-1",
+      "time": "06:30",
+      "title": "Tadarus, Sholat Dhuha & Tahfidz",
+      "description": "Memulai hari dengan pembiasaan ibadah dan membaca Al-Qur’an."
+    },
+    {
+      "id": "jadwal-2",
+      "time": "07:30",
+      "title": "Kegiatan Belajar Mengajar",
+      "description": "Pembelajaran intrakurikuler bersama guru di kelas."
+    },
+    {
+      "id": "jadwal-3",
+      "time": "10:10",
+      "title": "Istirahat",
+      "description": "Waktu jeda untuk beristirahat dan mempersiapkan pembelajaran berikutnya."
+    },
+    {
+      "id": "jadwal-4",
+      "time": "10:30",
+      "title": "Kegiatan Belajar Mengajar",
+      "description": "Melanjutkan pembelajaran dan kegiatan kelas."
+    },
+    {
+      "id": "jadwal-5",
+      "time": "11:50",
+      "title": "ISOMA",
+      "description": "Istirahat, sholat, dan makan."
+    },
+    {
+      "id": "jadwal-6",
+      "time": "12:50",
+      "title": "Kegiatan Belajar Mengajar",
+      "description": "Pembelajaran sesi siang."
+    },
+    {
+      "id": "jadwal-7",
+      "time": "14:50",
+      "title": "Sholat",
+      "description": "Pembiasaan ibadah bersama."
+    },
+    {
+      "id": "jadwal-8",
+      "time": "15:50",
+      "title": "Pulang",
+      "description": "Kegiatan sekolah reguler selesai."
+    },
+    {
+      "id": "jadwal-9",
+      "time": "16:00",
+      "title": "Ekstrakurikuler",
+      "description": "Pengembangan minat dan bakat sesuai program yang diikuti."
+    },
+    {
+      "id": "jadwal-10",
+      "time": "17:00",
+      "title": "Pulang Ekskul",
+      "description": "Kegiatan ekstrakurikuler selesai."
+    }
+  ],
+  "learning": [
+    {
+      "id": "belajar-1",
+      "title": "Presentasi kelompok",
+      "description": "Siswa belajar menyampaikan gagasan dan berkolaborasi melalui presentasi di depan kelas.",
+      "photo": {
+        "src": "/__l5e/assets-v1/b5e42b12-6f39-4421-a1cc-c4a73fbd6a81/intrakurikuler.png",
+        "alt": "Presentasi kelompok",
+        "crop": {
+          "x": 0.07476635514018691,
+          "y": 0.1358574610244989,
+          "width": 0.37694704049844235,
+          "height": 0.2951002227171492,
+          "ratio": 1.8264150943396227
+        }
+      }
+    },
+    {
+      "id": "belajar-2",
+      "title": "Diskusi dan komunikasi",
+      "description": "Proses belajar memberi ruang untuk bertanya, berdiskusi, serta menghargai pendapat teman.",
+      "photo": {
+        "src": "/__l5e/assets-v1/b5e42b12-6f39-4421-a1cc-c4a73fbd6a81/intrakurikuler.png",
+        "alt": "Diskusi dan komunikasi",
+        "crop": {
+          "x": 0.5677570093457944,
+          "y": 0.1358574610244989,
+          "width": 0.35202492211838005,
+          "height": 0.27728285077951004,
+          "ratio": 1.8152610441767068
+        }
+      }
+    },
+    {
+      "id": "belajar-3",
+      "title": "Belajar bersama",
+      "description": "Kerja kelompok membantu siswa membangun tanggung jawab dan saling mendukung dalam pembelajaran.",
+      "photo": {
+        "src": "/__l5e/assets-v1/b5e42b12-6f39-4421-a1cc-c4a73fbd6a81/intrakurikuler.png",
+        "alt": "Belajar bersama",
+        "crop": {
+          "x": 0.07476635514018691,
+          "y": 0.4643652561247216,
+          "width": 0.37461059190031154,
+          "height": 0.2739420935412027,
+          "ratio": 1.9552845528455285
+        }
+      }
+    },
+    {
+      "id": "belajar-4",
+      "title": "Karya dan praktik siswa",
+      "description": "Kegiatan praktik dan penyampaian hasil belajar melatih pemahaman, kreativitas, dan percaya diri.",
+      "photo": {
+        "src": "/__l5e/assets-v1/b5e42b12-6f39-4421-a1cc-c4a73fbd6a81/intrakurikuler.png",
+        "alt": "Karya dan praktik siswa",
+        "crop": {
+          "x": 0.5716510903426791,
+          "y": 0.4599109131403118,
+          "width": 0.34501557632398755,
+          "height": 0.27839643652561247,
+          "ratio": 1.772
+        }
+      }
+    }
+  ],
+  "clubs": [
+    {
+      "id": "ratoeh-jaroe",
+      "name": "Ratoeh Jaroe",
+      "category": "Seni & budaya",
+      "description": "Mengenal seni tari Aceh melalui gerak yang kompak, ritme, dan kerja sama tim.",
+      "activities": [
+        "Pengenalan gerak dasar",
+        "Latihan kekompakan dan ritme",
+        "Persiapan penampilan"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler Ratoeh Jaroe",
+        "crop": {
+          "x": 0.0873634945397816,
+          "y": 0.30335861321776814,
+          "width": 0.08580343213728549,
+          "height": 0.17876489707475623,
+          "ratio": 0.6666666666666666
+        }
+      },
+      "photos": []
+    },
+    {
+      "id": "futsal",
+      "name": "Futsal",
+      "category": "Olahraga",
+      "description": "Mengembangkan kemampuan bermain futsal, sportivitas, dan kerja sama di lapangan.",
+      "activities": [
+        "Latihan teknik dasar",
+        "Latihan strategi tim",
+        "Pertandingan persahabatan"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler Futsal",
+        "crop": {
+          "x": 0.3042121684867395,
+          "y": 0.3196099674972914,
+          "width": 0.12090483619344773,
+          "height": 0.16251354279523295,
+          "ratio": 1.0333333333333334
+        }
+      },
+      "photos": []
+    },
+    {
+      "id": "kir",
+      "name": "KIR",
+      "category": "Sains & kreativitas",
+      "description": "Kelompok Ilmiah Remaja menjadi ruang untuk mengembangkan rasa ingin tahu dan gagasan penelitian.",
+      "activities": [
+        "Diskusi ide penelitian",
+        "Eksperimen sederhana",
+        "Presentasi karya ilmiah"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler KIR",
+        "crop": {
+          "x": 0.5436817472698908,
+          "y": 0.314192849404117,
+          "width": 0.1287051482059282,
+          "height": 0.17009750812567714,
+          "ratio": 1.0509554140127388
+        }
+      },
+      "photos": []
+    },
+    {
+      "id": "paskibra",
+      "name": "Paskibra",
+      "category": "Kepemimpinan",
+      "description": "Membangun disiplin, kekompakan, dan tanggung jawab melalui latihan baris-berbaris.",
+      "activities": [
+        "Latihan baris-berbaris",
+        "Latihan pengibaran bendera",
+        "Pembinaan kedisiplinan"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler Paskibra",
+        "crop": {
+          "x": 0.7784711388455539,
+          "y": 0.3120260021668472,
+          "width": 0.12168486739469579,
+          "height": 0.17118093174431204,
+          "ratio": 0.9873417721518988
+        }
+      },
+      "photos": []
+    },
+    {
+      "id": "tapak-suci",
+      "name": "Tapak Suci",
+      "category": "Bela diri",
+      "description": "Mengasah keterampilan bela diri, kebugaran, serta sikap disiplin dan percaya diri.",
+      "activities": [
+        "Latihan gerak dasar",
+        "Latihan kebugaran",
+        "Pembinaan sikap dan sportivitas"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler Tapak Suci",
+        "crop": {
+          "x": 0.06942277691107643,
+          "y": 0.5438786565547129,
+          "width": 0.10998439937597504,
+          "height": 0.15276273022751896,
+          "ratio": 1.0
+        }
+      },
+      "photos": []
+    },
+    {
+      "id": "english-club",
+      "name": "English Club",
+      "category": "Bahasa",
+      "description": "Membiasakan penggunaan bahasa Inggris melalui aktivitas yang interaktif dan menyenangkan.",
+      "activities": [
+        "Latihan percakapan",
+        "Permainan bahasa",
+        "Presentasi dan storytelling"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler English Club",
+        "crop": {
+          "x": 0.2948517940717628,
+          "y": 0.5417118093174431,
+          "width": 0.1489859594383775,
+          "height": 0.1635969664138678,
+          "ratio": 1.2649006622516556
+        }
+      },
+      "photos": []
+    },
+    {
+      "id": "pramuka",
+      "name": "Pramuka",
+      "category": "Kepramukaan",
+      "description": "Melatih kemandirian, kepedulian, dan keterampilan hidup melalui kegiatan kepramukaan.",
+      "activities": [
+        "Keterampilan kepramukaan",
+        "Kerja sama regu",
+        "Kegiatan kepedulian lingkungan"
+      ],
+      "day": "",
+      "time": "",
+      "location": "",
+      "supervisor": "",
+      "cover": {
+        "src": "/__l5e/assets-v1/9c4327d4-9120-4532-b6b0-43a3f3f3f7a2/ekstrakurikuler.png",
+        "alt": "Identitas ekstrakurikuler Pramuka",
+        "crop": {
+          "x": 0.5522620904836193,
+          "y": 0.542795232936078,
+          "width": 0.11700468018720749,
+          "height": 0.15384615384615385,
+          "ratio": 1.056338028169014
+        }
+      },
+      "photos": []
+    }
+  ]
+}

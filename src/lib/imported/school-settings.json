@@ -1,0 +1,176 @@
+{
+  "profile": {
+    "heading": "Ilmu, akhlak, dan masa depan.",
+    "description": "SMP Islam Al-Mujahidin Pamulang memadukan pendidikan akademik dan nilai Islam dalam kehidupan sekolah.",
+    "motto": "Be The First To Be The Best",
+    "vision": "Membentuk generasi Islam yang berakhlak baik, disiplin, cerdas, terampil, peduli lingkungan, dan mampu menghadapi dunia global.",
+    "missions": [
+      {
+        "id": "misi-1",
+        "title": "Pendidikan Islam berkualitas",
+        "text": "Memperluas akses pendidikan yang membekali siswa dengan karakter Islami berdasarkan Al-Qur’an dan As-Sunah."
+      },
+      {
+        "id": "misi-2",
+        "title": "Potensi, bakat, dan minat",
+        "text": "Mengembangkan kemampuan berpikir, kecakapan emosional, dan kehidupan spiritual peserta didik."
+      },
+      {
+        "id": "misi-3",
+        "title": "Keterampilan untuk masa depan",
+        "text": "Melatih kreativitas, kemandirian, kerja sama, tanggung jawab, dan sportivitas melalui teknologi serta kegiatan pengembangan diri."
+      },
+      {
+        "id": "misi-4",
+        "title": "Sekolah dan masjid sebagai ruang belajar",
+        "text": "Menumbuhkan kepedulian sosial dalam lingkungan yang aman, sehat, nyaman, dan ramah lingkungan."
+      }
+    ],
+    "accreditation": {
+      "grade": "A",
+      "description": "Pendidikan akademik dan pembentukan karakter Islami berjalan bersama di SMP Islam Al-Mujahidin Pamulang.",
+      "image": ""
+    },
+    "stats": [
+      {
+        "id": "akreditasi",
+        "value": "A",
+        "label": "Akreditasi"
+      },
+      {
+        "id": "jenjang",
+        "value": "SMP",
+        "label": "Jenjang pendidikan"
+      },
+      {
+        "id": "program",
+        "value": "3",
+        "label": "Program unggulan"
+      },
+      {
+        "id": "ekskul",
+        "value": "7",
+        "label": "Program ekstrakurikuler"
+      }
+    ],
+    "images": [
+      {
+        "id": "profil-1",
+        "title": "Gedung sekolah",
+        "image": "/__l5e/assets-v1/6319534f-782c-4086-b443-a8b0e0115ff8/gedung-sekolah-hd.webp"
+      },
+      {
+        "id": "profil-2",
+        "title": "Masjid Al-Mujahidin Pamulang",
+        "image": "/__l5e/assets-v1/49fc1538-2e2b-4ef3-9fa1-562fecdf9f3d/masjid-al-mujahidin.png"
+      },
+      {
+        "id": "profil-3",
+        "title": "Warga sekolah",
+        "image": "/__l5e/assets-v1/0a6e17c4-5f69-48c0-8dd1-d84094d5c40c/gedung-sekolah.jpg"
+      }
+    ],
+    "carousel": {
+      "eyebrow": "Sekolah Islam di Pamulang",
+      "title": "SMP Islam Al-Mujahidin Pamulang",
+      "description": "Pendidikan akademik dan karakter Islami untuk generasi yang cerdas, terampil, serta peduli lingkungan.",
+      "image": "/__l5e/assets-v1/6319534f-782c-4086-b443-a8b0e0115ff8/gedung-sekolah-hd.webp"
+    }
+  },
+  "spmb": {
+    "academicYear": "2026/2027",
+    "heading": "Sistem Penerimaan Murid Baru",
+    "description": "Kenali program dan lingkungan SMP Islam Al-Mujahidin Pamulang. Hubungi tim sekolah untuk memperoleh informasi pendaftaran dan jadwal penerimaan terbaru.",
+    "backgroundImage": "/__l5e/assets-v1/6319534f-782c-4086-b443-a8b0e0115ff8/gedung-sekolah-hd.webp",
+    "ornamentImage": "/__l5e/assets-v1/6ed187b3-18b1-4662-a1b4-163a3a1241ab/spmb-ornamen-baru.png",
+    "heroImage": "/__l5e/assets-v1/4ba81428-6b13-438f-bcb6-7ebbfe0f1045/spmb-siswa.png",
+    "contactLabel": "Hubungi kami",
+    "requirementsNote": "Daftar awal berikut dapat dikonfirmasi kembali kepada tim penerimaan melalui WhatsApp.",
+    "requirements": [
+      {
+        "id": "syarat-1",
+        "text": "Salinan akta kelahiran dan kartu keluarga"
+      },
+      {
+        "id": "syarat-2",
+        "text": "Rapor dua semester terakhir"
+      },
+      {
+        "id": "syarat-3",
+        "text": "Pas foto terbaru calon murid"
+      },
+      {
+        "id": "syarat-4",
+        "text": "Surat keterangan dari sekolah asal"
+      }
+    ],
+    "stages": [
+      {
+        "id": "alur-1",
+        "title": "Pendaftaran",
+        "date": "Konfirmasi melalui admin sekolah",
+        "text": "Kirim formulir dan berkas calon murid melalui bagian penerimaan."
+      },
+      {
+        "id": "alur-2",
+        "title": "Asesmen & wawancara",
+        "date": "Mengikuti informasi dari sekolah",
+        "text": "Calon murid mengikuti asesmen dasar dan percakapan bersama tim pendidikan."
+      },
+      {
+        "id": "alur-3",
+        "title": "Pengumuman",
+        "date": "Mengikuti jadwal resmi sekolah",
+        "text": "Hasil disampaikan langsung kepada orang tua atau wali melalui surel."
+      }
+    ],
+    "carousel": {
+      "eyebrow": "Penerimaan Murid Baru 2026/2027",
+      "title": "Informasi SPMB SMP Islam Al-Mujahidin Pamulang",
+      "description": "Kenali jadwal, persyaratan, dan tahapan pendaftaran untuk calon murid baru.",
+      "image": "/__l5e/assets-v1/6319534f-782c-4086-b443-a8b0e0115ff8/gedung-sekolah-hd.webp"
+    }
+  },
+  "campus": [
+    {
+      "id": "masjid",
+      "label": "Masjid Al-Mujahidin Pamulang",
+      "title": "Sekolah dan masjid, ruang untuk bertumbuh.",
+      "description": "Lingkungan sekolah berada dekat Masjid Al-Mujahidin Pamulang. Kedekatan dengan masjid mendukung pembiasaan ibadah dan pendidikan karakter Islami.",
+      "image": "/__l5e/assets-v1/49fc1538-2e2b-4ef3-9fa1-562fecdf9f3d/masjid-al-mujahidin.png",
+      "isIllustration": false
+    },
+    {
+      "id": "gedung",
+      "label": "Lingkungan sekolah",
+      "title": "Belajar bersama, tumbuh bersama.",
+      "description": "Gedung sekolah menjadi tempat belajar, berinteraksi, dan mengembangkan potensi bersama guru serta warga sekolah.",
+      "image": "/__l5e/assets-v1/6319534f-782c-4086-b443-a8b0e0115ff8/gedung-sekolah-hd.webp",
+      "isIllustration": false
+    },
+    {
+      "id": "kelas",
+      "label": "Ruang kelas",
+      "title": "Ruang untuk bertanya dan belajar.",
+      "description": "Ruang kelas mendukung pembelajaran, diskusi, dan kerja kelompok siswa.",
+      "image": "/__l5e/assets-v1/6d5a5260-0e6d-428a-a011-4a96e17552d3/lingkungan-kelas.svg",
+      "isIllustration": true
+    },
+    {
+      "id": "tu",
+      "label": "Ruang tata usaha",
+      "title": "Layanan administrasi sekolah.",
+      "description": "Ruang tata usaha menjadi tempat pengelolaan administrasi dan pelayanan informasi sekolah.",
+      "image": "/__l5e/assets-v1/377b8baa-81fe-4d06-8fe4-64851ccf0e11/lingkungan-tu.svg",
+      "isIllustration": true
+    },
+    {
+      "id": "komputer",
+      "label": "Lab komputer",
+      "title": "Mengenal teknologi melalui praktik.",
+      "description": "Laboratorium komputer menjadi ruang untuk pembelajaran dan pengembangan keterampilan teknologi.",
+      "image": "/__l5e/assets-v1/86f372df-5ee2-409b-adef-12f67e875ecb/lingkungan-komputer.svg",
+      "isIllustration": true
+    }
+  ]
+}

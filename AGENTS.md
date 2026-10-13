@@ -11,3 +11,5 @@
 
 - Keep shared school navigation and footer in `site-chrome.tsx` so every public page stays consistent.
 - Keep homepage carousel behavior in a dedicated component because it owns client-side timing and controls.
+- Keep the uploaded website's media as CDN asset pointers so source imports stay lightweight.
+- Keep imported school collections as bundled baseline content with Cloud overrides; server functions project public posts and verify database admin roles before every write, replacing the uploaded filesystem API.
